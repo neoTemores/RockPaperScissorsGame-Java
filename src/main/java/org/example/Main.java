@@ -5,6 +5,12 @@ public class Main {
     public static void main(String[] args){
         System.out.println("\nHi! Let's play rock, paper, scissors!");
 
+        instructionsPrompt();
+        GameLogic.runGame();
+    }
+
+    //prompts user to display instructions
+    public static void instructionsPrompt(){
         System.out.print("\nDo you want to see the instructions? (y/n): ");
         String yesNoInput = scanner.nextLine().toUpperCase();
 
@@ -14,8 +20,6 @@ public class Main {
         } else if(yesNoInput.equals("Y") || yesNoInput.equals("YES")){
             showInstructions();
         }
-
-        GameLogic.runGame();
     }
 
     //validates if user entered yes or no
